@@ -95,19 +95,6 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-alias c='clear'
-alias grep='grep -i'
-alias h='history'
-alias httpd='python -m SimpleHTTPServer'
-alias jp='python -m json.tool'
-alias l='ls -CF'
-alias la='ls -A'
-alias ll='ls -alF'
-alias lt='ls -lrt'
-alias slb='screen -r -d leftbot || screen -S leftbot'
-alias slt='screen -r -d lefttop || screen -S lefttop'
-alias sr='screen -r -d right || screen -S right'
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
