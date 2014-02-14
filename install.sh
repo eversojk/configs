@@ -15,6 +15,7 @@ cp scripts-master/.vimrc ~
 cp scripts-master/.bashrc ~
 cp scripts-master/.bash_aliases ~
 cp scripts-master/.bash_aliases ~
+cp scripts-master/.gitconfig ~
 cp scripts-master/%gconf.xml ~/.gconf/apps/gnome-terminal/profiles/Default/
 sudo rm -r scripts-master
 rm master.zip
@@ -43,3 +44,6 @@ else
     sudo apt-get update
     sudo apt-get install --force-yes spotify-client -y
 fi
+
+sudo apt-get update
+sudo apt-get upgrade
