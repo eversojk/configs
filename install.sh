@@ -3,7 +3,6 @@
 # remap caps lock to control
 /usr/bin/setxkbmap -option "ctrl:nocaps"
 
-
 sudo rm -r Music
 sudo rm -r Public
 sudo rm -r Templates
