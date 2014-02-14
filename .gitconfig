@@ -1,0 +1,34 @@
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[alias]
+	st = status
+	ci = commit
+	ca = commit -a
+	br = branch
+	co = checkout
+	df = diff
+	lg = log -p
+	plog = "!git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
+	pushme = "!git pull && git push origin $(git symbolic-ref HEAD | sed 's/refs\\/heads\\///g')"
+[user]
+	name = John Eversole
+	email = eversojk@gmail.com
+[push]
+	default = current
+[branch]
+	autosetupmerge = true
