@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # remove drivers
+sudo /usr/share/ati/fglrx-uninstall.sh
 sudo apt-get purge fglrx*
 
 #remove x11 conf to reset to default
