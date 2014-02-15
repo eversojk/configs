@@ -24,6 +24,7 @@ sudo apt-get install vim -y
 sudo apt-get install git -y
 sudo apt-get install python-pip -y
 sudo apt-get install g++ -y
+sudo apt-get install openjdk-7-jdk -y
 sudo apt-get install chromium-browser -y
 sudo apt-get remove firefox -y
 sudo apt-get install mumble -y
