@@ -19,7 +19,6 @@ cp scripts-master/%gconf.xml ~/.gconf/apps/gnome-terminal/profiles/Default/
 sudo rm -r scripts-master
 rm master.zip
 
-
 sudo apt-get install vim -y
 sudo apt-get install git -y
 sudo apt-get install python-pip -y
@@ -46,6 +45,9 @@ else
     sudo apt-get update
     sudo apt-get install --force-yes spotify-client -y
 fi
+
+# ppa
+sudo add-apt-repository ppa:mumble/release -y
 
 sudo apt-get update
 sudo apt-get upgrade -y
