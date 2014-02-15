@@ -19,11 +19,13 @@ cp scripts-master/%gconf.xml ~/.gconf/apps/gnome-terminal/profiles/Default/
 sudo rm -r scripts-master
 rm master.zip
 
+
 sudo apt-get install vim -y
 sudo apt-get install git -y
 sudo apt-get install python-pip -y
 sudo apt-get install g++ -y
 sudo apt-get install chromium-browser -y
+sudo apt-get remove firefox -y
 sudo apt-get install mumble -y
 
 if [[ -n $(which steam) ]]; then
@@ -45,4 +47,4 @@ else
 fi
 
 sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get upgrade -y
