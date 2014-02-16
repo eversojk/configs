@@ -36,6 +36,8 @@ else
     sudo dpkg -i steam.deb
     sudo apt-get -f install -y
     rm steam.deb
+    # disables steam always being in the taskbar
+    echo 'STEAM_FRAME_FORCE_CLOSE=1' | sudo tee -a /etc/environment
 fi
 
 if [[ -n $(which spotify) ]]; then
