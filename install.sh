@@ -29,15 +29,6 @@ cp scripts-master/%gconf.xml ~/.gconf/apps/gnome-terminal/profiles/Default/
 sudo rm -r scripts-master
 rm master.zip
 
-sudo apt-get install vim -y
-sudo apt-get install git -y
-sudo apt-get install python-pip -y
-sudo apt-get install g++ -y
-sudo apt-get install openjdk-7-jdk -y
-sudo apt-get install chromium-browser -y
-sudo apt-get remove firefox -y
-sudo apt-get install mumble -y
-
 if [[ -n $(which steam) ]]; then
     echo "steam is already installed"
 else
@@ -57,7 +48,19 @@ else
 fi
 
 # ppa
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer
 sudo add-apt-repository ppa:mumble/release -y
 
 sudo apt-get update
+
+sudo apt-get install vim -y
+sudo apt-get install git -y
+sudo apt-get install python-pip -y
+sudo apt-get install g++ -y
+sudo apt-get install openjdk-7-jdk -y
+sudo apt-get install chromium-browser -y
+sudo apt-get remove firefox -y
+sudo apt-get install mumble -y
+sudo apt-get install grub-customizer
+
 sudo apt-get upgrade -y
