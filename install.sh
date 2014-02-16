@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# remap caps lock to control
-/usr/bin/setxkbmap -option "ctrl:nocaps"
+append_file () {
+    echo "$1" | sudo tee -a "$2"
+}
 
 sudo rm -r Music
 sudo rm -r Public
@@ -16,6 +17,15 @@ cp scripts-master/.bash_aliases ~
 cp scripts-master/.bash_aliases ~
 cp scripts-master/.gitconfig ~
 cp scripts-master/%gconf.xml ~/.gconf/apps/gnome-terminal/profiles/Default/
+
+## move script to remap caps to ctrl on startup
+#sudo mkdir -p /usr/local/scripts
+#sudo cp scripts-master/remap_caps.sh /usr/local/scripts
+#sudo chmod u+x /usr/local/scripts/remap_caps.sh
+#write_file "#!/bin/sh -e
+#/usr/local/scripts/remap_caps.sh
+#exit 0" "/etc/rc.local"
+
 sudo rm -r scripts-master
 rm master.zip
 
@@ -40,7 +50,7 @@ fi
 if [[ -n $(which spotify) ]]; then
     echo "spotify is already installed"
 else
-    echo "deb http://repository.spotify.com stable non-free" | sudo tee -a "/etc/apt/sources.list.d/john.list"
+    append_file "deb http://repository.spotify.com stable non-free" "/etc/apt/sources.list.d/john.list"
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recvkeys 94558F59
     sudo apt-get update
     sudo apt-get install --force-yes spotify-client -y
