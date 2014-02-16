@@ -114,5 +114,3 @@ PS1="\[\033[G\]$PS1"
 
 export LSCOLORS='ExGxFxdxCxDxDxBxBxExEx'
 export CLICOLOR=1
-
-/usr/bin/setxkbmap -option "ctrl:nocaps"
