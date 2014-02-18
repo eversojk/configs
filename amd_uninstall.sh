@@ -7,13 +7,14 @@ fi
 
 # remove drivers
 sudo /usr/share/ati/fglrx-uninstall.sh
-sudo apt-get purge fglrx*
+sudo apt-get purge fglrx* -y
+sudo rm -rf /usr/share/ati
 
 #remove x11 conf to reset to default
 sudo rm /etc/X11/xorg.conf
 
 # resintall xorg completely
-sudo apt-get install --reinstall xserver-xorg-core libgl1-mesa-glx:i386 libgl1-mesa-dri:i386 libgl1-mesa-glx:amd64 libgl1-mesa-dri:amd64
+sudo apt-get install --reinstall xserver-xorg-core libgl1-mesa-glx:i386 libgl1-mesa-dri:i386 libgl1-mesa-glx:amd64 libgl1-mesa-dri:amd64 -y
 
 # reconfigure xorg
 sudo dpkg-reconfigure xserver-xorg
