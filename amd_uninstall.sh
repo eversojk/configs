@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [[ $EUID -eq 0 ]]; then
+    echo "This script shouldn't be run as root!"
+    exit 1
+fi
+
 # remove drivers
 sudo /usr/share/ati/fglrx-uninstall.sh
 sudo apt-get purge fglrx*
