@@ -37,6 +37,14 @@ sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
 sudo add-apt-repository ppa:jonls/redshift-ppa -y
 sudo add-apt-repository ppa:mumble/release -y
 
+#removes
+sudo apt-get remove firefox -y
+sudo apt-get remove firefox-locale-en -y
+sudo apt-get remove thunderbird -y
+sudo apt-get remove thunderbird-gnome-support -y
+sudo apt-get remove thunderbird-locale-en -y
+sudo apt-get remove thunderbird-locale-en-us -y
+
 sudo apt-get update
 
 sudo apt-get install vim -y
@@ -45,7 +53,6 @@ sudo apt-get install python-pip -y
 sudo apt-get install g++ -y
 sudo apt-get install openjdk-7-jdk -y
 sudo apt-get install chromium-browser -y
-sudo apt-get remove firefox -y
 sudo apt-get install mumble -y
 sudo apt-get install grub-customizer -y
 sudo apt-get install redshift -y
