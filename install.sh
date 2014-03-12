@@ -28,7 +28,7 @@ rm steam.deb
 echo 'STEAM_FRAME_FORCE_CLOSE=1' | sudo tee -a /etc/environment
 
 append_file "deb http://repository.spotify.com stable non-free" "/etc/apt/sources.list.d/john.list"
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recvkeys 94558F59
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
 sudo apt-get update
 sudo apt-get install --force-yes spotify-client -y
 
