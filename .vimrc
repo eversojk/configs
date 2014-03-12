@@ -39,4 +39,4 @@ fun! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfun
 
-autocmd FileType c,cpp,java,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType c,cpp,java,python,php autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
