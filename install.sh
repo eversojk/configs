@@ -56,5 +56,6 @@ sudo apt-get install chromium-browser -y
 sudo apt-get install mumble -y
 sudo apt-get install grub-customizer -y
 sudo apt-get install redshift -y
+sudo apt-get install screen -y
 
 sudo apt-get upgrade -y
