@@ -31,6 +31,9 @@ set nu
 :command Wq wq
 :command W w
 :command Q q
+:command vS vs
+:command Vs vs
+:command VS vs
 
 fun! <SID>StripTrailingWhitespaces()
     let l = line(".")
