@@ -25,12 +25,15 @@ sudo dpkg -i steam.deb
 sudo apt-get -f install -y
 rm steam.deb
 # disables steam always being in the taskbar
-echo 'STEAM_FRAME_FORCE_CLOSE=1' | sudo tee -a /etc/environment
+append_file 'STEAM_FRAME_FORCE_CLOSE=1' "/etc/environment"
 
-append_file "deb http://repository.spotify.com stable non-free" "/etc/apt/sources.list.d/john.list"
+append_file "deb http://repository.spotify.com stable non-free" "/etc/apt/sources.list.d/spotify.list"
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
 sudo apt-get update
 sudo apt-get install --force-yes spotify-client -y
+
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+append_file "deb http://dl.google.com/linux/chrome/deb/ stable main" "/etc/apt/sources.list.d/google-chrome.list"
 
 # ppa
 sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
@@ -52,7 +55,7 @@ sudo apt-get install git -y
 sudo apt-get install python-pip -y
 sudo apt-get install g++ -y
 sudo apt-get install openjdk-7-jdk -y
-sudo apt-get install chromium-browser -y
+sudo apt-get install google-chrome-stable -y
 sudo apt-get install mumble -y
 sudo apt-get install grub-customizer -y
 sudo apt-get install redshift -y
