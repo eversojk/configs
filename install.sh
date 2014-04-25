@@ -39,6 +39,7 @@ append_file "deb http://dl.google.com/linux/chrome/deb/ stable main" "/etc/apt/s
 sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
 sudo add-apt-repository ppa:jonls/redshift-ppa -y
 sudo add-apt-repository ppa:mumble/release -y
+sudo add-apt-repository ppa:gwendal-lebihan-dev/hexchat-stable -y
 
 #removes
 sudo apt-get remove firefox -y
@@ -61,5 +62,6 @@ sudo apt-get install grub-customizer -y
 sudo apt-get install redshift -y
 sudo apt-get install screen -y
 sudo apt-get install shutter -y
+sudo apt-get install hexchat -y
 
 sudo apt-get upgrade -y
