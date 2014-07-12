@@ -14,7 +14,6 @@ unzip master.zip
 cp scripts-master/.vimrc ~
 cp scripts-master/.bashrc ~
 cp scripts-master/.bash_aliases ~
-cp scripts-master/.bash_aliases ~
 cp scripts-master/.gitconfig ~
 cp scripts-master/%gconf.xml ~/.gconf/apps/gnome-terminal/profiles/Default/
 sudo rm -r scripts-master
