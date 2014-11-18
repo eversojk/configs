@@ -11,11 +11,11 @@ sudo rm -r Videos
 
 wget https://github.com/eversojk/scripts/archive/master.zip
 unzip master.zip
-cp scripts-master/.vimrc ~
-cp scripts-master/.bashrc ~
-cp scripts-master/.bash_aliases ~
-cp scripts-master/.gitconfig ~
 cp scripts-master/%gconf.xml ~/.gconf/apps/gnome-terminal/profiles/Default/
+cp scripts-master/.bash_aliases ~
+cp scripts-master/.bashrc ~
+cp scripts-master/.gitconfig ~
+cp scripts-master/.vimrc ~
 sudo rm -r scripts-master
 rm master.zip
 
@@ -49,18 +49,18 @@ sudo apt-get remove thunderbird-locale-en-us -y
 
 sudo apt-get update
 
-sudo apt-get install vim -y
-sudo apt-get install git -y
-sudo apt-get install python-pip -y
+sudo apt-get install audacious -y
 sudo apt-get install g++ -y
+sudo apt-get install git -y
 sudo apt-get install google-chrome-stable -y
-sudo apt-get install mumble -y
 sudo apt-get install grub-customizer -y
+sudo apt-get install mumble -y
+sudo apt-get install python-pip -y
 sudo apt-get install redshift -y
+sudo apt-get install redshift-gtk -y
 sudo apt-get install screen -y
 sudo apt-get install shutter -y
-sudo apt-get install redshift-gtk -y
-sudo apt-get install audacious -y
+sudo apt-get install vim -y
 sudo apt-get install vlc -y
 
 sudo apt-get upgrade -y
