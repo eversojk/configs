@@ -61,5 +61,6 @@ sudo apt-get install screen -y
 sudo apt-get install shutter -y
 sudo apt-get install redshift-gtk -y
 sudo apt-get install audacious -y
+sudo apt-get install vlc -y
 
 sudo apt-get upgrade -y
