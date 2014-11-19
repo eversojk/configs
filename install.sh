@@ -56,6 +56,8 @@ sudo apt-get install google-chrome-stable -y
 sudo apt-get install grub-customizer -y
 sudo apt-get install mumble -y
 sudo apt-get install python-pip -y
+sudo apt-get install openvpn -y
+sudo apt-get install qbittorrent -y
 sudo apt-get install redshift -y
 sudo apt-get install redshift-gtk -y
 sudo apt-get install screen -y
