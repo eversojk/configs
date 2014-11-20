@@ -50,6 +50,8 @@ sudo apt-get remove thunderbird-locale-en-us -y
 sudo apt-get update
 
 sudo apt-get install audacious -y
+sudo apt-get install cowsay -y
+sudo apt-get install fortune-mod -y
 sudo apt-get install g++ -y
 sudo apt-get install git -y
 sudo apt-get install google-chrome-stable -y
