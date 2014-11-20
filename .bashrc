@@ -115,3 +115,4 @@ PS1="\[\033[G\]$PS1"
 export LSCOLORS='ExGxFxdxCxDxDxBxBxExEx'
 export CLICOLOR=1
 export LD_LIBRARY_PATH=/usr/lib32:$LD_LIBRARY_PATH
+cowsay $(fortune)
