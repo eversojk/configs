@@ -64,6 +64,7 @@ sudo apt-get install redshift -y
 sudo apt-get install redshift-gtk -y
 sudo apt-get install screen -y
 sudo apt-get install shutter -y
+sudo apt-get install xclip -y
 sudo apt-get install vim -y
 sudo apt-get install vlc -y
 
