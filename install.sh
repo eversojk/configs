@@ -9,6 +9,8 @@ sudo rm -r Public
 sudo rm -r Templates
 sudo rm -r Videos
 
+sudo apt-get install unzip -y
+
 wget https://github.com/eversojk/scripts/archive/master.zip
 unzip master.zip
 cp scripts-master/%gconf.xml ~/.gconf/apps/gnome-terminal/profiles/Default/
