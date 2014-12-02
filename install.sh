@@ -8,6 +8,9 @@ sudo rm -r Music
 sudo rm -r Public
 sudo rm -r Templates
 sudo rm -r Videos
+sudo rm -r Documents
+sudo mv Downloads downloads
+sudo mv Pictures pictures
 
 sudo apt-get install unzip -y
 
