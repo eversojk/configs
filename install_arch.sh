@@ -76,6 +76,9 @@ sudo yaourt -S --noconfirm spotify
 # Enable redshift on boot
 sudo systemctl /usr/lib/systemd/user/redshift-gtk.service
 
+# Start ssh-agent
+echo "eval $(ssh-agent) &" | tee -a ~/.xinitrc
+
 # Install i3
 sudo pacman -S i3
 echo "i3" | tee -a ~/.xinitrc
