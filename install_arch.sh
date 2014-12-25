@@ -85,4 +85,5 @@ echo "eval $(ssh-agent) &" | tee -a ~/.xinitrc
 
 # Install i3
 sudo pacman -S i3
+sudo pacman -S dmenu
 echo "i3" | tee -a ~/.xinitrc
