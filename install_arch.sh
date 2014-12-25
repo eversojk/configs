@@ -10,6 +10,7 @@ cp scripts-master/.bash_aliases ~
 cp scripts-master/.bashrc ~
 cp scripts-master/.gitconfig ~
 cp scripts-master/.vimrc ~
+sudo cp scripts-master/i3status.conf /etc/
 sudo rm -r scripts-master
 rm master.zip
 
