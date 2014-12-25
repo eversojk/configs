@@ -17,7 +17,6 @@ rm master.zip
 sudo pacman -S --noconfirm cowsay fortune-mod
 
 # Setup yaourt
-
 mkdir ~/builds
 cd ~/builds
 
