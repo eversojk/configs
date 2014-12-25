@@ -17,6 +17,8 @@ cp scripts-master/.gitconfig ~
 cp scripts-master/.vimrc ~
 cp scripts-master/redshift.conf ~/.config/
 sudo cp scripts-master/i3status.conf /etc/
+mkdir -p ~/.i3
+sudo cp scripts-master/i3_config ~/.i3/config
 sudo rm -r scripts-master
 rm master.zip
 
