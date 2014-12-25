@@ -47,7 +47,7 @@ sudo pacman -S xorg-server
 sudo pacman -S --noconfirm xorg-xinit
 sudo pacman -S --noconfirm xorg-setxkbmap
 sudo pacman -S --noconfirm xorg-xauth
- Set caps lock as control
+# Set caps lock as control
 echo "setxkbmap -option ctrl:nocaps &" | tee -a ~/.xinitrc
 
 # Install nvidia
