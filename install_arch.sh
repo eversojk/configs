@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo pacman -Syu
+
 # Setup terminal and config files
 
 # disable pc speaker
