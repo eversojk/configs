@@ -58,6 +58,10 @@ sudo pacman -S pulseaudio-alsa
 echo "start-pulseaudio-x11 &" | tee -a ~/.xinitrc
 echo "amixer sset Master unmute &" | tee -a ~/.xinitrc
 
+# Install time
+sudo pacman -S ntp
+sudo systemctl enable ntpd.service
+
 # Misc
 sudo pacman -S --noconfirm git
 sudo pacman -S --noconfirm gnome-terminal
