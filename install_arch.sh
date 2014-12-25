@@ -2,6 +2,9 @@
 
 # Setup terminal and config files
 
+# disable pc speaker
+echo "blacklist pcspkr" | sudo tee -a /etc/modprobe.d/nobeep.conf
+
 sudo pacman -S --noconfirm zip unzip
 
 curl -L -O https://github.com/eversojk/scripts/archive/master.zip
