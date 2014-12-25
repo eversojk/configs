@@ -73,6 +73,7 @@ sudo pacman -S --noconfirm mumble
 sudo pacman -S --noconfirm openssh
 sudo pacman -S --noconfirm python-pip
 sudo pacman -S --noconfirm redshift
+sudo pacman -S --noconfirm steam
 sudo pacman -S --noconfirm vlc
 
 sudo yaourt -S --noconfirm spotify
