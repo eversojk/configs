@@ -2,8 +2,6 @@
 
 sudo pacman -Syu
 
-# Setup terminal and config files
-
 # disable pc speaker
 echo "blacklist pcspkr" | sudo tee -a /etc/modprobe.d/nobeep.conf
 
