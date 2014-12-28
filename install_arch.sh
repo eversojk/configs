@@ -45,7 +45,7 @@ sudo pacman -U --noconfirm yaourt*.pkg.tar.xz
 
 rm -r builds
 
- Install X
+# Install X
 sudo pacman -S xorg-server
 sudo pacman -S --noconfirm xorg-xinit
 sudo pacman -S --noconfirm xorg-setxkbmap
@@ -99,3 +99,11 @@ echo "eval \$(ssh-agent) &" | tee -a ~/.xinitrc
 sudo pacman -S --noconfirm i3
 sudo pacman -S --noconfirm dmenu
 echo "i3" | tee -a ~/.xinitrc
+
+# Disable mouse acceleration in X
+echo 'Section "InputClass"
+    Identifier "My Mouse"
+    MatchIsPointer "yes"
+    Option "AccelerationProfile" "-1"
+    Option "AccelerationScheme" "none"
+EndSection' | sudo tee -a "/etc/X11/xorg.conf.d/50-mouse-acceleration.conf"
