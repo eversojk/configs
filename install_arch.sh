@@ -91,8 +91,8 @@ sudo pacman -S --noconfirm vlc
 yaourt -S --noconfirm spotify
 yaourt -S --noconfirm google-chrome
 
-## Enable redshift on boot
-#sudo systemctl /usr/lib/systemd/user/redshift-gtk.service
+# Enable redshift on boot
+echo "redshift-gtk &" | tee -a ~/.xinitrc
 
 # Start ssh-agent
 echo "eval \$(ssh-agent) &" | tee -a ~/.xinitrc
