@@ -56,11 +56,11 @@ echo -e "[multilib]\nInclude = /etc/pacman.d/mirrorlist" | sudo tee -a /etc/pacm
 sudo pacman -Syy
 sudo pacman -S --noconfirm nvidia
 sudo pacman -S --noconfirm lib32-nvidia-libgl
- Load nvidia config
+# Load nvidia config
 echo "nvidia-settings --load-config-only &" | tee -a ~/.xinitrc
- Set graphics card to max performance
+# Set graphics card to max performance
 echo "nvidia-settings -a [gpu:0]/GpuPowerMizerMode=1 &" | tee -a ~/.xinitrc
- write xorg.conf
+# write xorg.conf
 sudo nvidia-xconfig
 
 # Install sound
@@ -80,6 +80,10 @@ sudo pacman -S --noconfirm gnome-terminal
 sudo pacman -S --noconfirm mumble
 sudo pacman -S --noconfirm openssh
 sudo pacman -S --noconfirm python-pip
+# redshift dependencies
+sudo pacman -S --noconfirm python-gobject
+sudo pacman -S --noconfirm python-xdg
+sudo pacman -S --noconfirm librsvg
 sudo pacman -S --noconfirm redshift
 sudo pacman -S --noconfirm steam
 sudo pacman -S --noconfirm vlc
