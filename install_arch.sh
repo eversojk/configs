@@ -41,7 +41,7 @@ cd yaourt
 makepkg -s --noconfirm
 sudo pacman -U --noconfirm yaourt*.pkg.tar.xz
 
-rm -r builds
+rm -r ~/builds
 
 # Install X
 sudo pacman -S xorg-server
