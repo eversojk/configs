@@ -17,10 +17,10 @@ sudo apt-get install unzip -y
 wget https://github.com/eversojk/scripts/archive/master.zip
 unzip master.zip
 cp scripts-master/%gconf.xml ~/.gconf/apps/gnome-terminal/profiles/Default/
-cp scripts-master/.bash_aliases ~
-cp scripts-master/.bashrc ~
-cp scripts-master/.gitconfig ~
-cp scripts-master/.vimrc ~
+cp scripts-master/bash_aliases ~
+cp scripts-master/bashrc ~
+cp scripts-master/gitconfig ~
+cp scripts-master/vimrc ~
 sudo rm -r scripts-master
 rm master.zip
 
