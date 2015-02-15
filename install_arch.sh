@@ -57,10 +57,8 @@ echo -e "[multilib]\nInclude = /etc/pacman.d/mirrorlist" | sudo tee -a /etc/pacm
 sudo pacman -Syy
 sudo pacman -S --noconfirm nvidia
 sudo pacman -S --noconfirm lib32-nvidia-libgl
-# Load nvidia config
-echo "nvidia-settings --load-config-only &" | tee -a ~/.xinitrc
-# Set graphics card to max performance
-echo "nvidia-settings -a [gpu:0]/GpuPowerMizerMode=1 &" | tee -a ~/.xinitrc
+# Load nvidia config and set graphics card to max performance
+echo "nvidia-settings --load-config-only -a [gpu:0]/GpuPowerMizerMode=1 &" | tee -a ~/.xinitrc
 # write xorg.conf
 sudo nvidia-xconfig
 
