@@ -11,10 +11,10 @@ mkdir -p ~/.config
 mkdir -p ~/.i3
 curl -L -O https://github.com/eversojk/scripts/archive/master.zip
 unzip master.zip
-cp scripts-master/bash_aliases ~
-cp scripts-master/bashrc ~
-cp scripts-master/gitconfig ~
-cp scripts-master/vimrc ~
+cp scripts-master/bash_aliases ~/.bash_aliases
+cp scripts-master/bashrc ~/.bashrc
+cp scripts-master/gitconfig ~/.gitconfig
+cp scripts-master/vimrc ~/.vimrc
 cp scripts-master/redshift.conf ~/.config/
 sudo cp scripts-master/i3status.conf /etc/
 sudo cp scripts-master/i3_config ~/.i3/config
