@@ -94,7 +94,7 @@ yaourt -S --noconfirm google-chrome
 echo "redshift-gtk &" | tee -a ~/.xinitrc
 
 # Start ssh-agent
-echo "eval \$(ssh-agent) &" | tee -a ~/.xinitrc
+echo "eval \`ssh-agent\`" | tee -a ~/.xinitrc
 
 # Install i3
 sudo pacman -S --noconfirm i3
