@@ -108,3 +108,7 @@ echo 'Section "InputClass"
     Option "AccelerationProfile" "-1"
     Option "AccelerationScheme" "none"
 EndSection' | sudo tee -a "/etc/X11/xorg.conf.d/50-mouse-acceleration.conf"
+
+# fonts
+# korean
+sudo pacman -S --noconfirm ttf-baekmuk
