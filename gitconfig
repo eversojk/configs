@@ -32,3 +32,5 @@
 	default = current
 [branch]
 	autosetupmerge = true
+[core]
+	excludesfile = /home/john/.gitignore

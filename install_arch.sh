@@ -14,6 +14,7 @@ unzip master.zip
 cp scripts-master/bash_aliases ~/.bash_aliases
 cp scripts-master/bashrc ~/.bashrc
 cp scripts-master/gitconfig ~/.gitconfig
+cp scripts-master/gitignore ~/.gitignore
 cp scripts-master/vimrc ~/.vimrc
 cp scripts-master/redshift.conf ~/.config/
 sudo cp scripts-master/i3status.conf /etc/
