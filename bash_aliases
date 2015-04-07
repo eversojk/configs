@@ -1,5 +1,5 @@
 alias c='clear'
-alias grep='grep -i'
+alias grep='grep -in --color'
 alias h='history'
 alias httpd='python2 -m SimpleHTTPServer'
 alias jp='python2 -m json.tool'
