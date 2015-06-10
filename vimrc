@@ -1,41 +1,49 @@
-set background=dark
-set encoding=utf-8
-set showcmd
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+filetype off
 
+Plugin 'gmarik/Vundle.vim'
+Plugin 'jelera/vim-javascript-syntax'
+Bundle 'blerins/flattown'
+
+" All of your Plugins must be added before the following line
+call vundle#end()
+
+filetype plugin indent on
 syn on
 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
+set background=dark
 set backspace=indent,eol,start
-
-autocmd FileType python set autoindent
-autocmd FileType mustache set filetype=html
-au BufNewFile,BufRead *.as set filetype=java
-
-set hlsearch
-set incsearch
-set ignorecase
+set encoding=utf-8
+set expandtab   "tabs are spaces
+set hlsearch    "highlight search results
+set ignorecase  "ignore case for search results
+set incsearch   "incremental search results
+set nocompatible
+set number      "line numbers
+set paste       "enable pasting from clipboard
+set ruler       "enable ruler
+set rulerformat+=%f:%c "show file and column number
+set shiftwidth=4
+set showcmd
 set smartcase
-
+set softtabstop=4
+set tabstop=4
 set tags=tags;/
+set title
+set ai
+set cursorline
+
+colorscheme flattown
+
+autocmd FileType * autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd BufNewFile,BufRead *.json set filetype=javascript
+autocmd BufNewFile,BufRead .jshintrc set filetype=javascript
 
 map <C-\> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
-
-set paste
-set ruler
-set nu
-
 "switch between header/source with F4"
 map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
-
-:command WQ wq
-:command Wq wq
-:command W w
-:command Q q
-:command Vs vs
-:command VS vs
 
 fun! <SID>StripTrailingWhitespaces()
     let l = line(".")
@@ -44,4 +52,9 @@ fun! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfun
 
-autocmd FileType c,cpp,java,python,haskell autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
+:command Vs vs
+:command VS vs
