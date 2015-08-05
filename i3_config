@@ -12,6 +12,7 @@
 set $mod Mod1
 
 hide_edge_borders both
+focus_follows_mouse no
 
 # Alsa Volume Control ( via Fn keys )
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+ unmute
