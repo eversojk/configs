@@ -25,6 +25,7 @@
 	lg = log -p
 	plog = "!git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
 	pushme = "!git pull && git push origin $(git symbolic-ref HEAD | sed 's/refs\\/heads\\///g')"
+    ahead = "!git rev-list origin..HEAD | wc -l"
 [user]
 	name = John Eversole
 	email = eversojk@gmail.com
