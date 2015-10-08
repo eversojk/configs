@@ -16,7 +16,6 @@ syn on
 set background=dark
 set backspace=indent,eol,start
 set encoding=utf-8
-set expandtab   "tabs are spaces
 set hlsearch    "highlight search results
 set ignorecase  "ignore case for search results
 set incsearch   "incremental search results
@@ -25,11 +24,8 @@ set number      "line numbers
 set paste       "enable pasting from clipboard
 set ruler       "enable ruler
 set rulerformat+=%f:%c "show file and column number
-set shiftwidth=4
 set showcmd
 set smartcase
-set softtabstop=4
-set tabstop=4
 set tags=tags;/
 set title
 set ai
@@ -58,3 +54,8 @@ endfun
 :command Q q
 :command Vs vs
 :command VS vs
+
+" 4 spaces for tabs
+set tabstop=4
+set shiftwidth=4
+set expandtab
