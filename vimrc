@@ -4,7 +4,10 @@ call vundle#begin()
 filetype off
 
 Plugin 'gmarik/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'plasticboy/vim-markdown'
+
 Bundle 'blerins/flattown'
 
 " All of your Plugins must be added before the following line
@@ -30,6 +33,8 @@ set tags=tags;/
 set title
 set ai
 set cursorline
+set t_Co=256
+set clipboard+=unnamedplus
 
 colorscheme flattown
 
@@ -55,7 +60,10 @@ endfun
 :command Vs vs
 :command VS vs
 
-" 4 spaces for tabs
-set tabstop=4
-set shiftwidth=4
+" 2 spaces for tabs
 set expandtab
+set tabstop=2
+set shiftwidth=2
+
+let g:ycm_global_ycm_extra_conf = '~/.config/ycm/ycm.py'
+let g:vim_markdown_folding_disabled = 1
