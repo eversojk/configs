@@ -7,6 +7,7 @@ echo "blacklist pcspkr" | sudo tee -a /etc/modprobe.d/nobeep.conf
 
 sudo pacman -S --noconfirm zip unzip
 
+# config setup
 mkdir -p ~/.config
 mkdir -p ~/.i3
 curl -L -O https://github.com/eversojk/scripts/archive/master.zip
@@ -24,26 +25,6 @@ sudo rm -r scripts-master
 rm master.zip
 
 sudo pacman -S --noconfirm cowsay fortune-mod
-
-# Setup yaourt
-mkdir ~/builds
-cd ~/builds
-
-# install package-query for yaourt
-curl -L -O https://aur.archlinux.org/packages/pa/package-query/package-query.tar.gz
-tar -xvf package-query.tar.gz
-cd package-query
-makepkg -s --noconfirm
-sudo pacman -U --noconfirm package-query*.pkg.tar.xz
-
-cd ~/builds
-curl -L -O https://aur.archlinux.org/packages/ya/yaourt/yaourt.tar.gz
-tar -xvf yaourt.tar.gz
-cd yaourt
-makepkg -s --noconfirm
-sudo pacman -U --noconfirm yaourt*.pkg.tar.xz
-
-rm -r ~/builds
 
 # Install X
 sudo pacman -S xorg-server
@@ -75,21 +56,22 @@ sudo pacman -S --noconfirm ntp
 sudo systemctl enable ntpd.service
 
 # Misc
+sudo pacman -S --noconfirm neovim
+sudo pacman -S --noconfirm python-neovim
 sudo pacman -S --noconfirm git
-sudo pacman -S --noconfirm gnome-terminal
+sudo pacman -S --noconfirm konsole
 sudo pacman -S --noconfirm mumble
 sudo pacman -S --noconfirm openssh
 sudo pacman -S --noconfirm python-pip
+sudo pacman -S --noconfirm steam
+sudo pacman -S --noconfirm vlc
+sudo pacman -S --noconfirm google-chrome
 # redshift dependencies
 sudo pacman -S --noconfirm python-gobject
 sudo pacman -S --noconfirm python-xdg
 sudo pacman -S --noconfirm librsvg
+# end redshift dependencies
 sudo pacman -S --noconfirm redshift
-sudo pacman -S --noconfirm steam
-sudo pacman -S --noconfirm vlc
-
-yaourt -S --noconfirm spotify
-yaourt -S --noconfirm google-chrome
 
 # Enable redshift on boot
 echo "redshift-gtk &" | tee -a ~/.xinitrc
