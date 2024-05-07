@@ -27,8 +27,7 @@
 	pushme = "!git pull && git push origin $(git symbolic-ref HEAD | sed 's/refs\\/heads\\///g')"
     ahead = "!git rev-list origin..HEAD | wc -l"
 [user]
-	name = John Eversole
-	email = eversojk@gmail.com
+	name = eversojk
 [push]
 	default = current
 [branch]
