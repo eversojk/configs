@@ -9,7 +9,6 @@ vim.opt.incsearch = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.shiftwidth = 4
-vim.opt.shiftwidth = 4
 vim.opt.showcmd = true
 vim.opt.smartcase = true
 vim.opt.tabstop = 4
