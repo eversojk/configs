@@ -11,7 +11,6 @@ return {
         lazy = false,
         config = function()
             require("mason-lspconfig").setup({
-                --ensure_installed = { "lua_ls", "pylsp", "clangd", "cmake", "denols", "tsserver" },
                 ensure_installed = { "lua_ls", "pylsp", "clangd", "cmake", },
             })
         end
@@ -26,8 +25,6 @@ return {
             lspconfig.clangd.setup({})
             lspconfig.cmake.setup({})
             lspconfig.pylsp.setup({})
-            --lspconfig.denols.setup({})
-            --lspconfig.tsserver.setup({})
 
             vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
             vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
