@@ -1,3 +1,5 @@
+local language_servers = { "lua_ls", "clangd" }
+
 return {
     {
         "williamboman/mason.nvim",
@@ -9,17 +11,19 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "clangd" },
+                ensure_installed = language_servers,
             })
         end,
     },
     {
         "neovim/nvim-lspconfig",
         config = function()
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
             local lspconfig = require("lspconfig")
 
-            lspconfig.lua_ls.setup({})
-            lspconfig.clangd.setup({})
+            for _, ls in pairs(language_servers) do
+                lspconfig[ls].setup({ capabilities = capabilities })
+            end
 
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
             vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
