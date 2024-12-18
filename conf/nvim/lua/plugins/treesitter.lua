@@ -1,5 +1,6 @@
 return {
-    "nvim-treesitter/nvim-treesitter", build = ":TSUpdate",
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
     config = function()
         local configs = require("nvim-treesitter.configs")
         --require('nvim-treesitter.install').compilers = { "clang" }
@@ -9,5 +10,5 @@ return {
             highlight = { enable = true },
             indent = { enable = true },
         })
-    end
+    end,
 }
