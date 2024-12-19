@@ -3,8 +3,6 @@ return {
     dependencies = {
         "nvim-neotest/nvim-nio",
         "rcarriga/nvim-dap-ui",
-        "rcarriga/nvim-dap-ui",
-        "nvim-neotest/nvim-nio",
     },
     config = function()
         local dap = require("dap")
@@ -34,10 +32,6 @@ return {
 
         dap.configurations.c = dap.configurations.cpp
 
-        vim.keymap.set("n", "<Leader>dt", dap.toggle_breakpoint)
-        vim.keymap.set("n", "<Leader>dc", dap.continue)
-        vim.keymap.set("n", "<Leader>dd", dap.disconnect)
-
         local function open_dapui()
             dapui.open()
         end
@@ -50,5 +44,9 @@ return {
         dap.listeners.before.launch.dapui_config = open_dapui
         dap.listeners.before.event_terminated.dapui_config = close_dapui
         dap.listeners.before.event_exited.dapui_config = close_dapui
+
+        vim.keymap.set("n", "<Leader>dt", dap.toggle_breakpoint)
+        vim.keymap.set("n", "<Leader>dc", dap.continue)
+        vim.keymap.set("n", "<Leader>dd", dap.disconnect)
     end,
 }
