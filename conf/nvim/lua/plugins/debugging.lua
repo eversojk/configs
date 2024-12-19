@@ -31,6 +31,7 @@ return {
         }
 
         dap.configurations.c = dap.configurations.cpp
+        dap.configurations.rust = dap.configurations.cpp
 
         local function open_dapui()
             dapui.open()
