@@ -1,10 +1,9 @@
 return {
     {
-        "fatih/molokai",
+        "rebelot/kanagawa.nvim",
+        lazy = false,
         config = function()
-            vim.g.molokai_original = 1
-            vim.g.rehash256 = 1
-            vim.cmd("colorscheme molokai")
+            vim.cmd("colorscheme kanagawa-wave")
         end,
     },
 }
