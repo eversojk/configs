@@ -1,12 +1,13 @@
 return {
     {
-        "vim-airline/vim-airline",
-    },
-    {
-        "vim-airline/vim-airline-themes",
+        "nvim-lualine/lualine.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
         config = function()
-            vim.g.airline_theme = "google_dark"
-            vim.g.airline_section_z = "%l% :%c%  %p%%"
+            local lualine = require("lualine")
+
+            lualine.setup({
+                options = { theme = "moonfly" },
+            })
         end,
     },
 }
