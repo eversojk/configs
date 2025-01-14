@@ -28,6 +28,7 @@
     ahead = "!git rev-list origin..HEAD | wc -l"
 [user]
 	name = eversojk
+	email = 2398285+eversojk@users.noreply.github.com
 [push]
 	default = current
 [branch]
