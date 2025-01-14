@@ -51,6 +51,7 @@ function grepCommon($searchStr) {
 }
 
 # aliases
+Set-Alias c clear
 Set-Alias gg grepCommon
 Set-Alias vim nvim
 
