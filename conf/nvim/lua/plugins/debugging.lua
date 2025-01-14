@@ -1,3 +1,28 @@
+local function does_file_exists(file_path)
+    local file = io.open(file_path, "r")
+    local found = false
+
+    if file ~= nil then
+        found = true
+        io.close(file)
+    end
+
+    return found
+end
+
+-- ubuntu & arch installs can have different executable names
+local function find_lldb_exec()
+    local possible_execs = { "/usr/bin/lldb-dap", "/usr/bin/lldb-vscode-14" }
+
+    for i = 1, #possible_execs do
+        if does_file_exists(possible_execs[i]) then
+            return possible_execs[i]
+        end
+    end
+
+    return nil
+end
+
 return {
     "mfussenegger/nvim-dap",
     dependencies = {
@@ -10,9 +35,11 @@ return {
 
         require("dapui").setup()
 
+        local lldb_exec_path = find_lldb_exec()
+
         dap.adapters.lldb = {
             type = "executable",
-            command = "/usr/bin/lldb-dap",
+            command = lldb_exec_path,
             name = "lldb",
         }
 
