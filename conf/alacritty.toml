@@ -1,14 +1,17 @@
-# C:\Users\..\AppData\Roaming\alacritty\alacritty.toml
-working_directory = 'C:\Users'
-
 [colors]
 draw_bold_text_with_bright_colors = true
+primary.foreground = "0xFFFFFF"
+primary.background = "0x000000"
 
 [font]
 size = 12
+normal.family = "Hack Nerd Font Mono"
+bold.family = "Hack Nerd Font Mono"
+italic.family = "Hack Nerd Font Mono"
+bold_italic.family = "Hack Nerd Font Mono"
 
-[font.normal]
-family = "JetBrains Mono"
+[general]
+working_directory = 'C:\Users\jeversole'
 
 [scrolling]
 history = 40000
@@ -16,7 +19,7 @@ history = 40000
 [selection]
 save_to_clipboard = true
 
-[shell]
+[terminal.shell]
 program = 'C:\Program Files\PowerShell\7\pwsh.exe'
 
 [window]
