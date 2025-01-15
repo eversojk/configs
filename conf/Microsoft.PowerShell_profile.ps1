@@ -40,7 +40,7 @@ function prompt {
     }
     else {
         # we're not in a repo so don't bother displaying branch name/sha
-        Write-Host $path -ForegroundColor "green"
+        Write-Host $path -NoNewline -ForegroundColor "green"
     }
 
     return $userPrompt
