@@ -18,11 +18,18 @@ return {
     {
         "neovim/nvim-lspconfig",
         config = function()
+            local cmp_nvim_lsp = require("cmp_nvim_lsp")
             local lspconfig = require("lspconfig")
-            local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
             for _, ls in pairs(language_servers) do
-                lspconfig[ls].setup({ capabilities = capabilities })
+                local setup_args = { capabilities = cmp_nvim_lsp.default_capabilities() }
+
+                -- fixes warning regarding multiple different client offset_encodings
+                if ls == "clangd" then
+                    setup_args.cmd = { "clangd", "--offset-encoding=utf-16", }
+                end
+
+                lspconfig[ls].setup(setup_args)
             end
 
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
