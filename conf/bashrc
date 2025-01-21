@@ -112,7 +112,12 @@ export EDITOR=$(which vim)
 # tie prompt to first column
 PS1="\[\033[G\]$PS1"
 
+if [ -z "$SSH_AUTH_SOCK" ]; then
+    eval "$(ssh-agent -s)"
+fi
+
 export LSCOLORS='ExGxFxdxCxDxDxBxBxExEx'
 export CLICOLOR=1
 export LD_LIBRARY_PATH=/usr/lib32:$LD_LIBRARY_PATH
+
 cowsay $(fortune)
