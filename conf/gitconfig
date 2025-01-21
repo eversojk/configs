@@ -34,4 +34,4 @@
 [branch]
 	autosetupmerge = true
 [core]
-	excludesfile = /home/john/.gitignore
+	excludesfile = ~/.config/git/ignore
