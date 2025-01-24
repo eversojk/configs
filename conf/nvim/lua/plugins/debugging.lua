@@ -16,25 +16,24 @@ return {
             name = "lldb",
         }
 
-        dap.configurations.cpp = {
-            {
-                name = "Launch",
-                type = "lldb",
-                request = "launch",
-                program = function()
-                    return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
-                end,
-                cwd = "${workspaceFolder}",
-                stopOnEntry = false,
-                args = function()
-                    local args_string = vim.fn.input("Input arguments: ")
-                    return vim.split(args_string, " ")
-                end,
-            },
+        local lldb_config = {
+            name = "Launch",
+            type = "lldb",
+            request = "launch",
+            cwd = "${workspaceFolder}",
+            stopOnEntry = false,
+            program = function()
+                return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+            end,
+            args = function()
+                local args_string = vim.fn.input("Input arguments: ")
+                return vim.split(args_string, " ")
+            end,
         }
 
-        dap.configurations.c = dap.configurations.cpp
-        dap.configurations.rust = dap.configurations.cpp
+        dap.configurations.c = lldb_config
+        dap.configurations.cpp = lldb_config
+        dap.configurations.rust = lldb_config
 
         local function open_dapui()
             dapui.open()
