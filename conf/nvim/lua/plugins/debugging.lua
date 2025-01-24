@@ -1,33 +1,8 @@
-local function does_file_exists(file_path)
-    local file = io.open(file_path, "r")
-    local found = false
-
-    if file ~= nil then
-        found = true
-        io.close(file)
-    end
-
-    return found
-end
-
--- ubuntu & arch installs can have different executable names
-local function find_lldb_exec()
-    local possible_bins = { "/usr/bin/lldb-dap" }
-
-    for i = 1, #possible_bins do
-        if does_file_exists(possible_bins[i]) then
-            return possible_bins[i]
-        end
-    end
-
-    return nil
-end
-
 return {
-    "mfussenegger/nvim-dap",
+    "rcarriga/nvim-dap-ui",
     dependencies = {
         "nvim-neotest/nvim-nio",
-        "rcarriga/nvim-dap-ui",
+        "mfussenegger/nvim-dap",
     },
     config = function()
         local dap = require("dap")
@@ -35,11 +10,9 @@ return {
 
         require("dapui").setup()
 
-        local lldb_exec_path = find_lldb_exec()
-
         dap.adapters.lldb = {
             type = "executable",
-            command = lldb_exec_path,
+            command = "/usr/bin/lldb-dap",
             name = "lldb",
         }
 
