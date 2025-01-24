@@ -1,3 +1,10 @@
+local formatters_to_install = {
+    "clang_format",
+    "cmakelang",
+    "jq",
+    "stylua",
+}
+
 return {
     "jay-babu/mason-null-ls.nvim",
     event = { "BufReadPre", "BufNewFile" },
@@ -10,12 +17,6 @@ return {
         local mason_none_ls = require("mason-null-ls")
 
         none_ls.setup()
-
-        local formatters_to_install = {
-            "stylua",
-            "clang_format",
-            "jq",
-        }
 
         mason_none_ls.setup({
             automatic_installation = true,

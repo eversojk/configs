@@ -1,4 +1,8 @@
-local language_servers = { "lua_ls", "clangd" }
+local language_servers = {
+    "clangd",
+    "cmake",
+    "lua_ls",
+}
 
 return {
     {
