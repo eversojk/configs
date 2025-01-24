@@ -12,11 +12,11 @@ end
 
 -- ubuntu & arch installs can have different executable names
 local function find_lldb_exec()
-    local possible_execs = { "/usr/bin/lldb-dap", "/usr/bin/lldb-vscode-14" }
+    local possible_bins = { "/usr/bin/lldb-dap" }
 
-    for i = 1, #possible_execs do
-        if does_file_exists(possible_execs[i]) then
-            return possible_execs[i]
+    for i = 1, #possible_bins do
+        if does_file_exists(possible_bins[i]) then
+            return possible_bins[i]
         end
     end
 
