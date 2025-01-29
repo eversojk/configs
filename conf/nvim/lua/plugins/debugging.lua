@@ -3,39 +3,34 @@ return {
     dependencies = {
         "nvim-neotest/nvim-nio",
         "mfussenegger/nvim-dap",
+        "jay-babu/mason-nvim-dap.nvim",
     },
     config = function()
         local dap = require("dap")
         local dapui = require("dapui")
+        local mason_nvim_dap = require("mason-nvim-dap")
+
+        mason_nvim_dap.setup({
+            ensure_installed = { "codelldb" },
+            handlers = {
+                codelldb = function(config)
+                    config.adapters = {
+                        type = "executable",
+                        command = "/usr/bin/lldb-dap",
+                        name = "codelldb",
+                    }
+
+                    config.configurations[1].args = function()
+                        local args_string = vim.fn.input("RIGHT ON!!! Input arguments: ")
+                        return vim.split(args_string, " ")
+                    end
+
+                    mason_nvim_dap.default_setup(config)
+                end,
+            },
+        })
 
         require("dapui").setup()
-
-        dap.adapters.lldb = {
-            type = "executable",
-            command = "/usr/bin/lldb-dap",
-            name = "lldb",
-        }
-
-        local lldb_config = {
-            {
-                name = "Launch",
-                type = "lldb",
-                request = "launch",
-                cwd = "${workspaceFolder}",
-                stopOnEntry = false,
-                program = function()
-                    return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
-                end,
-                args = function()
-                    local args_string = vim.fn.input("Input arguments: ")
-                    return vim.split(args_string, " ")
-                end,
-            }
-        }
-
-        dap.configurations.c = lldb_config
-        dap.configurations.cpp = lldb_config
-        dap.configurations.rust = lldb_config
 
         local function open_dapui()
             dapui.open()
