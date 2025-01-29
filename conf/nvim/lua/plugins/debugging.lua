@@ -17,18 +17,20 @@ return {
         }
 
         local lldb_config = {
-            name = "Launch",
-            type = "lldb",
-            request = "launch",
-            cwd = "${workspaceFolder}",
-            stopOnEntry = false,
-            program = function()
-                return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
-            end,
-            args = function()
-                local args_string = vim.fn.input("Input arguments: ")
-                return vim.split(args_string, " ")
-            end,
+            {
+                name = "Launch",
+                type = "lldb",
+                request = "launch",
+                cwd = "${workspaceFolder}",
+                stopOnEntry = false,
+                program = function()
+                    return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+                end,
+                args = function()
+                    local args_string = vim.fn.input("Input arguments: ")
+                    return vim.split(args_string, " ")
+                end,
+            }
         }
 
         dap.configurations.c = lldb_config
