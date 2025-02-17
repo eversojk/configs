@@ -13,6 +13,11 @@ vim.opt.showcmd = true
 vim.opt.smartcase = true
 vim.opt.tabstop = 4
 
+-- set formatoptions so that comments are not automatically inserted on newline
+vim.api.nvim_create_autocmd("FileType", {
+    command = "set formatoptions-=cro",
+})
+
 -- prevent typo when pressing `wq` or `q`
 vim.cmd([[
     cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
