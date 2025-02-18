@@ -1,38 +1,38 @@
 [color]
-	branch = auto
-	diff = auto
-	status = auto
+    branch = auto
+    diff = auto
+    status = auto
 [color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+    frag = magenta bold
+    meta = yellow bold
+    new = green bold
+    old = red bold
 [color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+    added = yellow
+    changed = green
+    untracked = cyan
 [alias]
-	st = status
-	ci = commit
-	ca = commit -a
-	br = branch
-	co = checkout
-	cob = checkout -b
-	df = diff
-	lg = log -p
-	plog = "!git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
-	pushme = "!git pull && git push origin $(git symbolic-ref HEAD | sed 's/refs\\/heads\\///g')"
     ahead = "!git rev-list origin..HEAD | wc -l"
+    br = branch
+    ca = commit -a
+    ci = commit
+    co = checkout
+    cob = checkout -b
+    df = diff
+    lg = log -p
+    plog = "!git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
+    pushme = "!git pull && git push origin $(git symbolic-ref HEAD | sed 's/refs\\/heads\\///g')"
+    st = status
 [user]
-	name = eversojk
-	email = 2398285+eversojk@users.noreply.github.com
+    email = 2398285+eversojk@users.noreply.github.com
+    name = eversojk
 [push]
-	default = current
+    default = current
 [branch]
-	autosetupmerge = true
+    autosetupmerge = true
 [core]
-	excludesfile = ~/.config/git/ignore
+    excludesfile = ~/.config/git/ignore
