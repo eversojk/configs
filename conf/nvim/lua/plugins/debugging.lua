@@ -22,11 +22,6 @@ return {
                         name = "codelldb",
                     }
 
-                    config.configurations[1].args = function()
-                        local args_string = vim.fn.input("RIGHT ON!!! Input arguments: ")
-                        return vim.split(args_string, " ")
-                    end
-
                     mason_nvim_dap.default_setup(config)
                 end,
             },
