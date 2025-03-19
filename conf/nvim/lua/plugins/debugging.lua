@@ -10,6 +10,8 @@ return {
         local dapui = require("dapui")
         local mason_nvim_dap = require("mason-nvim-dap")
 
+        dap.set_exception_breakpoints()
+
         mason_nvim_dap.setup({
             ensure_installed = { "codelldb" },
             handlers = {
