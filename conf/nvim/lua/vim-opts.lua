@@ -26,3 +26,5 @@ vim.cmd([[
     cnoreabbrev <expr> Wq ((getcmdtype() is# ':' && getcmdline() is# 'Wq')?('wq'):('Wq'))
     cnoreabbrev <expr> wQ ((getcmdtype() is# ':' && getcmdline() is# 'wQ')?('wq'):('wQ'))
 ]])
+
+vim.diagnostic.config({ virtual_lines = true });
