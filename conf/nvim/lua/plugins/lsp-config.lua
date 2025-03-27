@@ -30,7 +30,7 @@ return {
 
                 -- fixes warning regarding multiple different client offset_encodings
                 if ls == "clangd" then
-                    setup_args.cmd = { "clangd", "--offset-encoding=utf-16", }
+                    setup_args.cmd = { "clangd", "--offset-encoding=utf-16" }
                 end
 
                 lspconfig[ls].setup(setup_args)
