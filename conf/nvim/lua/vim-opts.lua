@@ -1,5 +1,5 @@
-vim.opt.autowrite = true
 vim.opt.ai = true
+vim.opt.autowrite = true
 vim.opt.clipboard = "unnamed"
 vim.opt.cursorline = true
 vim.opt.expandtab = true
