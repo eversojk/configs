@@ -1,4 +1,4 @@
-vim.opt.ai = true
+vim.opt.autoindent = true
 vim.opt.autowrite = true
 vim.opt.clipboard = "unnamed"
 vim.opt.cursorline = true
